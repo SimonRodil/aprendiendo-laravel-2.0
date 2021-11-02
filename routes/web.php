@@ -18,4 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+# Posts-Vistas
 Route::get('posts', [PostsControllers::class, 'index']);
+Route::get('posts/create', [PostsControllers::class, 'create']);
+Route::get('posts/{post}/edit', [PostsControllers::class, 'edit']);
+
+Route::post('posts', [PostsControllers::class, 'store']);
+Route::put('posts/{post}', [PostsControllers::class, 'update']);
