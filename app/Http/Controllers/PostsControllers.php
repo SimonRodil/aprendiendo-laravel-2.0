@@ -61,4 +61,12 @@ class PostsControllers extends Controller
         return redirect('/posts');
 
     }
+    
+    public function delete(Post $post){
+
+        $post->delete();
+
+        return ('Se borró');
+
+    }
 }
